@@ -28,7 +28,10 @@ class ViewController: UIViewController {
 
     @IBAction func tapButton(sender: AnyObject) {
         print("Hello!")
-        helloLabel.text = piropos[Int(arc4random_uniform(4))]
+        
+        let count:Int = piropos.count;
+        
+        helloLabel.text = piropos[Int(arc4random_uniform(UInt32(count)))]
         self.view.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
     }
 }
