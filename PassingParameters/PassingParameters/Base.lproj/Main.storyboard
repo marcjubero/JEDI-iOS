@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--ResultScene-->
+        <scene sceneID="R2h-8U-lQb">
+            <objects>
+                <viewController id="aWt-Ct-EQv" userLabel="ResultScene" customClass="ResultSceneController" customModule="PassingParameters" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aYu-MP-XFK"/>
+                        <viewControllerLayoutGuide type="bottom" id="822-Wo-uuR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Saf-u8-drX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ln1-H1-fTn">
+                                <rect key="frame" x="271" y="285" width="58" height="30"/>
+                                <state key="normal" title="GoBack!"/>
+                                <connections>
+                                    <action selector="goBack:" destination="aWt-Ct-EQv" eventType="touchUpInside" id="EGV-WF-Qi3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5Q-uV-6EW">
+                                <rect key="frame" x="154" y="256" width="292" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ln1-H1-fTn" firstAttribute="top" secondItem="C5Q-uV-6EW" secondAttribute="bottom" constant="8" id="4LX-Ed-3wv"/>
+                            <constraint firstItem="C5Q-uV-6EW" firstAttribute="top" secondItem="aYu-MP-XFK" secondAttribute="bottom" constant="236" id="8Q9-0l-vKq"/>
+                            <constraint firstItem="ln1-H1-fTn" firstAttribute="centerX" secondItem="Saf-u8-drX" secondAttribute="centerX" id="UJk-1r-YOU"/>
+                            <constraint firstItem="C5Q-uV-6EW" firstAttribute="leading" secondItem="Saf-u8-drX" secondAttribute="leadingMargin" constant="134" id="fZY-9T-nJn"/>
+                            <constraint firstItem="ln1-H1-fTn" firstAttribute="centerY" secondItem="Saf-u8-drX" secondAttribute="centerY" id="myf-k2-LNo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="C5Q-uV-6EW" id="whO-Li-EzO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZa-Yp-v5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="-387"/>
+        </scene>
+        <!--MainScene-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="MainScene" customClass="ViewController" customModule="PassingParameters" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpw-Q9-t91">
+                                <rect key="frame" x="255" y="285" width="91" height="30"/>
+                                <state key="normal" title="Pasa la cabra"/>
+                                <connections>
+                                    <segue destination="aWt-Ct-EQv" kind="show" identifier="showResults" id="itJ-Bp-QOM"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escriu quelcom..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JeS-t7-iPw">
+                                <rect key="frame" x="176" y="235" width="249" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JeS-t7-iPw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Bb-TH-53l"/>
+                            <constraint firstItem="Mpw-Q9-t91" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mkY-hS-Y6d"/>
+                            <constraint firstItem="Mpw-Q9-t91" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pe4-RF-S4E"/>
+                            <constraint firstItem="Mpw-Q9-t91" firstAttribute="top" secondItem="JeS-t7-iPw" secondAttribute="bottom" constant="20" id="uU1-6C-QYf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="JeS-t7-iPw" id="pPY-b6-ibG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-735" y="-387"/>
+        </scene>
+    </scenes>
+</document>

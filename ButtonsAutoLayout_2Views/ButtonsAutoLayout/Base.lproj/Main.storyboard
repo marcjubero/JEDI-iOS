@@ -21,17 +21,17 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hey-gx-mMm" userLabel="OrangeBtn">
                                 <rect key="frame" x="20" y="20" width="275" height="400"/>
                                 <color key="backgroundColor" red="1" green="0.68625913829248197" blue="0.26928978592443198" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Orange"/>
                                 <connections>
-                                    <segue destination="QDV-2h-qwf" kind="show" identifier="showOrange" id="U6j-Gb-bVJ"/>
+                                    <action selector="show:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OMA-F0-rZp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ynn-9P-jwC" userLabel="BlueBtn">
                                 <rect key="frame" x="305" y="20" width="275" height="400"/>
                                 <color key="backgroundColor" red="0.437313407221252" green="0.89954287177680048" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Blue"/>
                                 <connections>
-                                    <segue destination="hyG-YR-h6V" kind="show" identifier="showBlue" id="XVR-la-MKP"/>
+                                    <action selector="show:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2m3-hj-KCi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Occ-Nj-Tai" userLabel="GreenBtn">
@@ -40,9 +40,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="nBn-bF-Gsv"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Green"/>
                                 <connections>
-                                    <segue destination="2Z5-Q8-h59" kind="show" identifier="showGreen" id="a50-fI-pPm"/>
+                                    <action selector="show:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TWS-4N-qOT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,94 +61,13 @@
                             <constraint firstItem="Ynn-9P-jwC" firstAttribute="leading" secondItem="Hey-gx-mMm" secondAttribute="trailing" constant="10" id="tiz-8X-wyn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="QDV-2h-qwf" kind="show" identifier="progSegue" id="2vQ-qU-IHR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="213" y="436"/>
-        </scene>
-        <!--GreenScene-->
-        <scene sceneID="CFn-jB-XEQ">
-            <objects>
-                <viewController id="2Z5-Q8-h59" userLabel="GreenScene" customClass="GreenViewController" customModule="ButtonsAutoLayout" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wta-Om-dx7"/>
-                        <viewControllerLayoutGuide type="bottom" id="bv8-Tj-haG"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jzo-jz-TN6">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKE-UI-5et">
-                                <rect key="frame" x="279" y="250" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9w-jZ-6yj">
-                                <rect key="frame" x="283" y="285" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="goBack:" destination="2Z5-Q8-h59" eventType="touchUpInside" id="fKa-PA-fYd"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.40193492819999999" green="1" blue="0.5093810017" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="GKE-UI-5et" firstAttribute="centerX" secondItem="jzo-jz-TN6" secondAttribute="centerX" id="1tI-zY-0xr"/>
-                            <constraint firstItem="W9w-jZ-6yj" firstAttribute="centerX" secondItem="jzo-jz-TN6" secondAttribute="centerX" id="6qg-mv-y3m"/>
-                            <constraint firstItem="W9w-jZ-6yj" firstAttribute="centerY" secondItem="jzo-jz-TN6" secondAttribute="centerY" id="Pey-tJ-4lM"/>
-                            <constraint firstItem="W9w-jZ-6yj" firstAttribute="top" secondItem="GKE-UI-5et" secondAttribute="bottom" constant="14" id="hOi-Ao-WDc"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="greenLabel" destination="GKE-UI-5et" id="SiN-l7-A7y"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P7p-mS-kFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1091" y="436"/>
-        </scene>
-        <!--BlueScene-->
-        <scene sceneID="Ul1-SD-SV6">
-            <objects>
-                <viewController id="hyG-YR-h6V" userLabel="BlueScene" customClass="BlueViewController" customModule="ButtonsAutoLayout" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="LEX-qj-WQP"/>
-                        <viewControllerLayoutGuide type="bottom" id="x6s-hw-A8K"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bU8-A3-ti8">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oum-Mo-IJ3">
-                                <rect key="frame" x="279" y="251" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khp-m9-nKj">
-                                <rect key="frame" x="281" y="285" width="39" height="30"/>
-                                <state key="normal" title="Back!"/>
-                                <connections>
-                                    <action selector="goBack:" destination="hyG-YR-h6V" eventType="touchUpInside" id="16j-O5-05x"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.32877489996883746" green="0.87302645391991851" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="Oum-Mo-IJ3" firstAttribute="centerX" secondItem="bU8-A3-ti8" secondAttribute="centerX" id="3Xz-7f-Vc1"/>
-                            <constraint firstItem="khp-m9-nKj" firstAttribute="centerX" secondItem="bU8-A3-ti8" secondAttribute="centerX" id="cPJ-FR-g5j"/>
-                            <constraint firstItem="khp-m9-nKj" firstAttribute="top" secondItem="Oum-Mo-IJ3" secondAttribute="bottom" constant="13" id="n3B-eT-FMX"/>
-                            <constraint firstItem="khp-m9-nKj" firstAttribute="centerY" secondItem="bU8-A3-ti8" secondAttribute="centerY" id="ygi-if-182"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="blueLabel" destination="Oum-Mo-IJ3" id="5UF-5z-3zj"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LVO-Ik-Lgt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1091" y="1216"/>
         </scene>
         <!--OrangeScene-->
         <scene sceneID="FT3-mq-VxB">
@@ -165,7 +84,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFJ-dA-KJ4">
                                 <rect key="frame" x="279" y="245" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlJ-D1-TGB">
@@ -185,12 +104,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="orangeLabel" destination="pFJ-dA-KJ4" id="4Qz-5G-wvR"/>
+                        <outlet property="mainLabel" destination="pFJ-dA-KJ4" id="CGK-Xz-aSv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CwI-Al-m07" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1091" y="-227"/>
+            <point key="canvasLocation" x="1145" y="436"/>
         </scene>
     </scenes>
 </document>
